@@ -3,17 +3,65 @@
     margin: 0%;
     padding: 0%;
 }
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Roboto+Mono:wght@300;400&display=swap');
+        
+        body {
+            font-family: 'Roboto Mono', monospace;
+            background: linear-gradient(135deg, #0a0a0a, #1a0033);
+            color: #00ffcc;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+        
+        .neon-text {
+            text-shadow: 0 0 10px #00ffcc,
+                        0 0 20px #00ffcc,
+                        0 0 40px #ff00ff;
+        }
 
-header {
-    background-color: #057386;
-}
+        .nav-btn {
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .nav-btn:hover {
+            transform: translateX(15px) scale(1.05);
+            box-shadow: 0 0 25px #00ffcc;
+        }
+        
+        .nav-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 40%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            transition: 0.7s;
+        }
+        
+        .nav-btn:hover::before {
+            left: 200%;
+        }
 
-nav {
-    background-color: #057386;
-}
+        .stage-card {
+            transition: all 0.4s ease;
+        }
+        
+        .stage-card:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 0 30px rgba(0, 255, 204, 0.5);
+        }
 
-aside {
-    background-color: #057386;
-    color: white;
-}
+        .active {
+            background: linear-gradient(45deg, #00ffcc, #ff00ff);
+            color: black;
+            box-shadow: 0 0 25px #00ffcc;
+        }
 
+        .pdf-viewer {
+            background: #111;
+            border: 2px solid #00ffcc;
+            box-shadow: 0 0 30px rgba(0, 255, 204, 0.3);
+        }
